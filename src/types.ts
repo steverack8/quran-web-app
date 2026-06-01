@@ -35,14 +35,6 @@ export interface SurahLink {
   jumlahAyat: number;
 }
 
-export interface AIInsight {
-  surahNumber: number;
-  ayahNumber: number;
-  summary: string;
-  tags: string[];
-  contemporaryContext: string;
-  timestamp: number;
-}
 
 export interface Bookmark {
   id: string; // "surah:ayah" format, e.g., "2:155"
@@ -66,18 +58,3 @@ export interface UserPrefs {
   showTajweed: boolean;
 }
 
-export interface SemanticSearchResult {
-  surahNumber: number;
-  surahName: string;
-  ayahNumber: number;
-  matchingText: string; // Highlighted relevance
-  reason: string; // Why Gemini thinks it matches
-  textArab: string;
-  textIndonesia: string;
-}
-
-export interface Feedback {
-  id: string; // "surah:ayah"
-  type: 'up' | 'down';
-  timestamp: number;
-}

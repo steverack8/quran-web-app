@@ -1,20 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Al-Quran Web
 
-# Run and deploy your AI Studio app
+Al-Quran Web adalah aplikasi digital interaktif untuk membaca Al-Quran yang menyediakan teks Arab, terjemahan Bahasa Indonesia, serta audio murottal yang dapat diputar per ayat maupun secara berlanjut antar surah. Aplikasi ini dibangun sebagai aplikasi berbasis client-side yang mengambil data secara langsung dari API Kemenag RI melalui layanan equran.id.
 
-This contains everything you need to run your app locally.
+## Teknologi Utama
+* **React JS** (Library antarmuka pengguna)
+* **Tailwind CSS** (Styling utilitas modern)
+* **RESTful API** (Pengambilan data asinkron langsung)
 
-View your app in AI Studio: https://ai.studio/apps/11015335-be9e-4005-943d-121cc32ec21f
+## Panduan Instalasi & Penggunaan Lokal
 
-## Run Locally
+Untuk memasang dan menjalankan aplikasi ini secara lokal di komputer Anda, pastikan Anda telah memasang **Node.js** terlebih dahulu, kemudian ikuti langkah-langkah di bawah ini:
 
-**Prerequisites:**  Node.js
+### 1. Kloning / Unduh Proyek
+Pindahkan direktori terminal Anda ke folder hasil unduhan aplikasi ini.
 
+### 2. Pasang Dependencies
+Jalankan perintah berikut di terminal Anda untuk mengunduh dan menyelaraskan seluruh berkas modul pustaka frontend yang diperlukan:
+```bash
+npm install
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 3. Jalankan Server Pengembangan Lokal
+Setelah dependencies terpasang, jalankan perintah pengembangan berikut:
+```bash
+npm run dev
+```
+Setelah server menyala, buka alamat URL yang tercantum pada konsol terminal Anda di browser Anda.
+
+### 4. Melakukan Build Produksi (Opsional)
+Untuk mengompilasi dan memaketkan aplikasi menjadi file HTML/JS/CSS statis siap pakai untuk hosting produksi, jalankan perintah:
+```bash
+npm run build
+```
+Hasil kompilasi siap pakai akan tersimpan di dalam folder `dist/`.
