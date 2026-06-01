@@ -1,0 +1,8 @@
+{
+  "name": "Penjelajah Al-Quran AI",
+  "description": "Pendamping Al-Quran pintar dengan pencarian semantik mendalam, ringkasan tematik kontemporer, qari audio dinamis, dan tafsir interaktif berbasis data Kemenag RI dan Gemini AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

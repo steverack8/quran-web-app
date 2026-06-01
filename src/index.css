@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", "system-ui", "-apple-system", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-arabic: "Amiri", "Traditional Arabic", serif;
+}
+
+/* Custom fade-in micro-interactions */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* Scrollbar customizations for clean reading panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.2);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.4);
+}
+
+/* Support sepia themes */
+.sepia-mode {
+  --background: 250, 246, 238; /* #FAF6EE */
+}
+
+.sepia-mode .bg-white {
+  background-color: #f7ebd3 !important;
+}
+
+.sepia-mode .bg-slate-50 {
+  background-color: #eeddbb !important;
+}
+
+.sepia-mode .text-slate-800,
+.sepia-mode .text-slate-900,
+.sepia-mode .text-slate-755 {
+  color: #4a3319 !important;
+}
+
+.sepia-mode .text-slate-500,
+.sepia-mode .text-slate-400 {
+  color: #7c6144 !important;
+}
+
+.sepia-mode .border-slate-100,
+.sepia-mode .border-slate-200 {
+  border-color: #e3d2b0 !important;
+}
