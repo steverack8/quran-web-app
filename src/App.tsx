@@ -27,6 +27,7 @@ import { TAJWEED_LEGEND } from './utils/tajweed';
 import SurahListCard from './components/SurahList';
 import VerseCard from './components/VerseCard';
 import AudioControlBar from './components/AudioControlBar';
+import logoQuran from './assets/logo-quran.png';
 
 export default function App() {
   // --- Standard Local State Configurations ---
@@ -355,14 +356,18 @@ export default function App() {
       
       {/* 1. Global Pristine Header Navigation */}
       <header className="sticky top-0 z-40 bg-white dark:bg-[#121824] border-b border-slate-200/80 dark:border-[#232d3f] px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-emerald-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20">
-            <BookOpen className="w-5 h-5" />
+        <div className="flex items-center gap-3.5 group cursor-default">
+          <div className="relative flex items-center justify-center w-12 h-12 transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-0.5">
+            <img src={logoQuran} alt="Quran Logo" className="w-full h-full object-contain drop-shadow-sm relative z-10" />
+            <div className="absolute inset-0 bg-emerald-500/20 dark:bg-emerald-400/20 opacity-0 group-hover:opacity-100 rounded-full transition-opacity duration-500 blur-xl -z-10"></div>
           </div>
-          <div>
-            <h1 className="text-base font-extrabold tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5 font-sans">
-              Al-Quran Web
+          <div className="flex flex-col">
+            <h1 className="text-xl font-black tracking-tight flex items-center font-sans bg-clip-text text-transparent bg-gradient-to-r from-emerald-700 to-teal-600 dark:from-emerald-400 dark:to-teal-300">
+              Al-Quran
             </h1>
+            <span className="text-[9px] font-extrabold tracking-[0.25em] uppercase text-emerald-600/70 dark:text-emerald-400/70 -mt-0.5">
+              Digital
+            </span>
           </div>
         </div>
 
