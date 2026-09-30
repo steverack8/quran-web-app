@@ -13,11 +13,6 @@ export const fallbackSurahs: Record<number, SurahDetail> = {
     jumlahAyat: 7,
     tempatTurun: "Mekah",
     arti: "Pembukaan",
-    deskripsi: "Surat Al Fatihah (Pembukaan) yang diturunkan di Mekah...",
-    audioFull: {
-      "01": "https://equran.nos.wjv-1.neo.id/audio-full/Abdullah-Al-Juhany/001.mp3",
-      "05": "https://equran.nos.wjv-1.neo.id/audio-full/Mishary-Rashid-Al-Afasy/001.mp3"
-    },
     ayat: [
       {
         nomorAyat: 1,
@@ -90,8 +85,6 @@ export const fallbackSurahs: Record<number, SurahDetail> = {
         }
       }
     ],
-    suratSelanjutnya: { nomor: 2, nama: "البقرة", namaLatin: "Al-Baqarah", jumlahAyat: 286 },
-    suratSebelumnya: false
   },
   112: {
     nomor: 112,
@@ -100,11 +93,6 @@ export const fallbackSurahs: Record<number, SurahDetail> = {
     jumlahAyat: 4,
     tempatTurun: "Mekah",
     arti: "Ikhlas",
-    deskripsi: "Menerangkan pokok tauhid kemurnian esensi Allah...",
-    audioFull: {
-      "01": "https://equran.nos.wjv-1.neo.id/audio-full/Abdullah-Al-Juhany/112.mp3",
-      "05": "https://equran.nos.wjv-1.neo.id/audio-full/Mishary-Rashid-Al-Afasy/112.mp3"
-    },
     ayat: [
       {
         nomorAyat: 1,
@@ -147,8 +135,6 @@ export const fallbackSurahs: Record<number, SurahDetail> = {
         }
       }
     ],
-    suratSelanjutnya: { nomor: 113, nama: "الفلق", namaLatin: "Al-Falaq", jumlahAyat: 5 },
-    suratSebelumnya: { nomor: 111, nama: "المسد", namaLatin: "Al-Lahab", jumlahAyat: 5 }
   },
   113: {
     nomor: 113,
@@ -157,11 +143,6 @@ export const fallbackSurahs: Record<number, SurahDetail> = {
     jumlahAyat: 5,
     tempatTurun: "Mekah",
     arti: "Waktu Subuh",
-    deskripsi: "Doa perlindungan diri kepada Penguasa fajar subuh...",
-    audioFull: {
-      "01": "https://equran.nos.wjv-1.neo.id/audio-full/Abdullah-Al-Juhany/113.mp3",
-      "05": "https://equran.nos.wjv-1.neo.id/audio-full/Mishary-Rashid-Al-Afasy/113.mp3"
-    },
     ayat: [
       {
         nomorAyat: 1,
@@ -214,8 +195,6 @@ export const fallbackSurahs: Record<number, SurahDetail> = {
         }
       }
     ],
-    suratSelanjutnya: { nomor: 114, nama: "الناس", namaLatin: "An-Nas", jumlahAyat: 6 },
-    suratSebelumnya: { nomor: 112, nama: "الإخلاص", namaLatin: "Al-Ikhlas", jumlahAyat: 4 }
   },
   114: {
     nomor: 114,
@@ -224,11 +203,6 @@ export const fallbackSurahs: Record<number, SurahDetail> = {
     jumlahAyat: 6,
     tempatTurun: "Mekah",
     arti: "Manusia",
-    deskripsi: "Doa perlindungan agung kepada Raja Penguasa Pemelihara manusia...",
-    audioFull: {
-      "01": "https://equran.nos.wjv-1.neo.id/audio-full/Abdullah-Al-Juhany/114.mp3",
-      "05": "https://equran.nos.wjv-1.neo.id/audio-full/Mishary-Rashid-Al-Afasy/114.mp3"
-    },
     ayat: [
       {
         nomorAyat: 1,
@@ -291,7 +265,5 @@ export const fallbackSurahs: Record<number, SurahDetail> = {
         }
       }
     ],
-    suratSelanjutnya: false,
-    suratSebelumnya: { nomor: 113, nama: "الفلق", namaLatin: "Al-Falaq", jumlahAyat: 5 }
   }
 };

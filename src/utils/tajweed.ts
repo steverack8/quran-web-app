@@ -6,7 +6,6 @@
 export interface TajweedRule {
   id: string;
   name: string;
-  color: string; // Tailwind class
   colorHex: string;
   description: string;
   example: string;
@@ -16,7 +15,6 @@ export const TAJWEED_LEGEND: TajweedRule[] = [
   {
     id: 'ghunnah',
     name: 'Ghunnah (Dengung)',
-    color: 'text-emerald-500 dark:text-emerald-400',
     colorHex: '#10b981',
     description: 'Suara mendengung kuat pada huruf Nun (نّ) atau Meem (مّ) yang memiliki tasydid.',
     example: 'إنَّ / ممَّ'
@@ -24,7 +22,6 @@ export const TAJWEED_LEGEND: TajweedRule[] = [
   {
     id: 'qalqalah',
     name: 'Qalqalah (Pantulan)',
-    color: 'text-sky-500 dark:text-sky-400',
     colorHex: '#0ea5e9',
     description: 'Bunyi memantul ketika huruf Qaf, Tah, Ba, Jeem, atau Dal (ق, ط, ب, ج, د) berharakat sukun.',
     example: 'يَقْطَعُونَ / نَعْبُدُ'
@@ -32,7 +29,6 @@ export const TAJWEED_LEGEND: TajweedRule[] = [
   {
     id: 'mad',
     name: 'Mad Mutassil / Munfassil (Panjang)',
-    color: 'text-rose-500 dark:text-rose-400',
     colorHex: '#f43f5e',
     description: 'Memperpanjang bacaan suara huruf mad saat bertemu bendera maddah (ٓ).',
     example: 'السَّمَآءِ / جَآءَ'
@@ -40,7 +36,6 @@ export const TAJWEED_LEGEND: TajweedRule[] = [
   {
     id: 'tanween',
     name: 'Tanwin & Ikhfa (Pewarnaan Harakat)',
-    color: 'text-amber-500 dark:text-amber-400',
     colorHex: '#f59e0b',
     description: 'Dengung samar atau peleburan pada suara tanwin (ً  ٌ  ٍ) bertemu huruf ikhfa/idgham.',
     example: 'عَلِيمٌ حَكِيمٌ'

@@ -19,6 +19,16 @@
   animation: fadeIn 0.25s ease-out forwards;
 }
 
+/* Mobile drawer slide-in from the left */
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.25s ease-out forwards;
+}
+
 /* Scrollbar customizations for clean reading panels */
 ::-webkit-scrollbar {
   width: 6px;
@@ -33,33 +43,4 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(16, 185, 129, 0.4);
-}
-
-/* Support sepia themes */
-.sepia-mode {
-  --background: 250, 246, 238; /* #FAF6EE */
-}
-
-.sepia-mode .bg-white {
-  background-color: #f7ebd3 !important;
-}
-
-.sepia-mode .bg-slate-50 {
-  background-color: #eeddbb !important;
-}
-
-.sepia-mode .text-slate-800,
-.sepia-mode .text-slate-900,
-.sepia-mode .text-slate-755 {
-  color: #4a3319 !important;
-}
-
-.sepia-mode .text-slate-500,
-.sepia-mode .text-slate-400 {
-  color: #7c6144 !important;
-}
-
-.sepia-mode .border-slate-100,
-.sepia-mode .border-slate-200 {
-  border-color: #e3d2b0 !important;
 }

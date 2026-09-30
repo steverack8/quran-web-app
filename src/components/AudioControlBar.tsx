@@ -3,8 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Play, Pause, Volume2, VolumeX, SkipForward, SkipBack, Disc, RefreshCw } from 'lucide-react';
+import { RECITERS } from '../constants/reciters';
 
 interface AudioControlBarProps {
   currentSurahName: string;
@@ -49,41 +50,33 @@ export default function AudioControlBar({
     }
   };
 
-  const reciters = [
-    { id: '05', name: 'Mishary Rashid Al-Afasy' },
-    { id: '01', name: 'Abdullah Al-Juhany' },
-    { id: '02', name: 'Abdul-Basit' },
-    { id: '03', name: 'Abdurrahman As-Sudais' },
-    { id: '04', name: 'Al-Minshawi' },
-  ];
-
   return (
     <div
       id="global-audio-player"
-      className="bg-white/95 dark:bg-[#121824] border-t border-slate-200 dark:border-slate-800/80 p-4 md:py-5 md:px-6 shadow-[0_-8px_32px_rgba(0,0,0,0.1)] backdrop-blur-md flex flex-col md:flex-row items-center justify-between gap-4 transition-all"
+      className="bg-white/95 dark:bg-[#121824] border-t border-slate-200 dark:border-slate-800/80 p-3 sm:p-4 md:py-5 md:px-6 shadow-[0_-8px_32px_rgba(0,0,0,0.1)] backdrop-blur-md flex flex-wrap md:flex-nowrap items-center justify-between gap-x-3 gap-y-2 md:gap-4 transition-all"
     >
       {/* 1. Track Information / Badge */}
-      <div className="flex items-center gap-3 w-full md:w-1/3">
-        <div className={`w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 ${isPlaying ? 'animate-spin duration-[12s]' : ''}`}>
+      <div className="flex items-center gap-3 min-w-0 flex-1 order-1">
+        <div className={`hidden sm:flex w-10 h-10 shrink-0 rounded-xl bg-emerald-500/10 items-center justify-center text-emerald-600 dark:text-emerald-400 ${isPlaying ? 'animate-spin duration-[12s]' : ''}`}>
           <Disc className="w-5 h-5" />
         </div>
-        <div>
-          <div className="text-sm font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
-            {currentSurahName}
+        <div className="min-w-0">
+          <div className="text-sm font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5 min-w-0">
+            <span className="truncate">{currentSurahName}</span>
             {currentAyahNumber && (
-              <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/15">
+              <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/15 shrink-0">
                 Ayat {currentAyahNumber}
               </span>
             )}
           </div>
-          <div className="text-[10px] uppercase tracking-wider font-semibold text-slate-400 dark:text-slate-500 mt-0.5">
+          <div className="text-[10px] uppercase tracking-wider font-semibold text-slate-400 dark:text-slate-500 mt-0.5 truncate">
             Kemenag CDN Audio Streaming
           </div>
         </div>
       </div>
 
       {/* 2. Audio Control Controls */}
-      <div className="flex items-center gap-4 w-full md:w-1/3 justify-center">
+      <div className="flex items-center gap-3 sm:gap-4 w-full md:flex-1 justify-center order-3 md:order-2">
         <button
           id="btn-player-skip-prev"
           onClick={onSkipPrev}
@@ -127,18 +120,18 @@ export default function AudioControlBar({
         </button>
       </div>
 
-      {/* 3. Volumetrics and Reciter Selection */}
-      <div className="flex items-center justify-end gap-5 w-full md:w-1/3">
+      {/* 3. Volumetrics and Reciter Selection (shares line 1 with track info on mobile) */}
+      <div className="flex items-center gap-2 sm:gap-5 min-w-0 md:flex-1 md:justify-end order-2 md:order-3">
         {/* Reciter Select Dropdown */}
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1.5 min-w-0">
           <span className="text-xs font-medium text-slate-400 hidden xl:inline">Qari:</span>
           <select
             id="qari-reciter-select"
             value={preferredReciter}
             onChange={(e) => onReciterChange(e.target.value)}
-            className="text-xs px-2 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-1 focus:ring-emerald-500 cursor-pointer"
+            className="text-xs px-2 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-1 focus:ring-emerald-500 cursor-pointer max-w-[42vw] sm:max-w-none truncate"
           >
-            {reciters.map((r) => (
+            {RECITERS.map((r) => (
               <option key={r.id} value={r.id}>
                 {r.name}
               </option>
@@ -167,7 +160,7 @@ export default function AudioControlBar({
               setIsMuted(false);
               onVolumeChange(parseFloat(e.target.value));
             }}
-            className="w-20 tracking-wide h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+            className="hidden sm:block w-20 tracking-wide h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
           />
         </div>
       </div>

@@ -3,8 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
-import { Play, Pause, Bookmark, Languages, Check, HelpCircle } from 'lucide-react';
+import { Play, Pause, Bookmark, Languages } from 'lucide-react';
 import { Ayah } from '../types';
 import { applyTajweedColors } from '../utils/tajweed';
 
@@ -53,7 +52,7 @@ export default function VerseCard({
   return (
     <div
       id={`verse-card-${ayah.nomorAyat}`}
-      className={`p-6 md:p-8 rounded-2xl border transition-all duration-300 ${
+      className={`p-4 sm:p-6 md:p-8 rounded-2xl border transition-all duration-300 ${
         isPlaying
           ? 'bg-emerald-50/30 border-emerald-200 dark:bg-slate-900 dark:border-emerald-900'
           : 'bg-white border-slate-200/70 dark:bg-slate-950 dark:border-slate-850/80 shadow-sm'

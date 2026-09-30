@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { Search, Flame, BookOpen } from 'lucide-react';
 import { SurahListItem } from '../data/surahList';
 

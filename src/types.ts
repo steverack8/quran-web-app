@@ -8,10 +8,8 @@ export interface Surah {
   nama: string;
   namaLatin: string;
   jumlahAyat: number;
-  tempatTurun: 'Mekah' | 'Madinah' | string;
+  tempatTurun: 'Mekah' | 'Madinah';
   arti: string;
-  deskripsi: string;
-  audioFull: Record<string, string>;
 }
 
 export interface Ayah {
@@ -24,17 +22,7 @@ export interface Ayah {
 
 export interface SurahDetail extends Surah {
   ayat: Ayah[];
-  suratSelanjutnya: SurahLink | false;
-  suratSebelumnya: SurahLink | false;
 }
-
-export interface SurahLink {
-  nomor: number;
-  nama: string;
-  namaLatin: string;
-  jumlahAyat: number;
-}
-
 
 export interface Bookmark {
   id: string; // "surah:ayah" format, e.g., "2:155"
@@ -47,7 +35,7 @@ export interface Bookmark {
 }
 
 export interface UserPrefs {
-  theme: 'light' | 'dark' | 'sepia';
+  theme: 'light' | 'dark';
   fontSize: 'sm' | 'base' | 'lg' | 'xl' | '2xl';
   lastRead: {
     surahNumber: number;
@@ -57,4 +45,3 @@ export interface UserPrefs {
   preferredReciter: string; // "01", "02", "03", "04", "05"
   showTajweed: boolean;
 }
-
